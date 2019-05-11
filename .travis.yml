@@ -5,8 +5,6 @@ services:
 
 before_install:
   # Clone DualBootPatcher Repository
-git:
-
   - git clone --recursive https://github.com/DubMastr/DualBootPatcher -b master DualBootPatcher/
   # Pull docker images
   - docker pull yshalsager/dualbootpatcher:9.3.0-7-base
