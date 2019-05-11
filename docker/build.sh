@@ -13,7 +13,7 @@ if [[ ! -d generated ]]; then
 fi
 
 for variant in "${variants[@]}"; do
-    ./docker build \
+            build \
         --force-rm \
         -f "generated/Dockerfile.${variant}" \
         -t "${repo}:${version}-${release}-${variant}" \
