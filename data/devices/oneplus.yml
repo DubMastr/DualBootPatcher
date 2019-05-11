@@ -1,10 +1,11 @@
 ---
 - name:  OnePlus6
-  id: enchilada
+  id: A6000 enchilada
   codenames:
+      - OnePlus6
       - enchilada
       - A6000
-  architecture: arm64-v8a
+  architecture: arm64-v8a 
   block_devs:
     base_dirs:
       - /dev/block/platform/soc/1d84000.ufshc/by-name
@@ -146,11 +147,48 @@
     supported: true
     flags:
       - TW_GRAPHICS_FORCE_USE_LINELENGTH
-    brightness_path:  /sys/class/leds/lcd-backlight/brightness 
+    brightness_path: 
     max_brightness: 255
     default_brightness: 168
     cpu_temp_path: /sys/devices/virtual/thermal/thermal_zone0/temp
     battery_path: /sys/class/power_supply/battery/capacity
     graphics_backends:
       - fbdev
+    theme: portrait_hdpi
+
+- name: 
+  id: 
+  codenames:
+    - 
+    - 
+  architecture: 
+
+  block_devs:
+    base_dirs:
+      - lrwxrwxrwx    1 root     root            38 May 10 23
+    system:
+      - lrwxrwxrwx    1 root     root            38 May 10 23/dev
+      - /dev/block/bootdevice/by-name/system_b
+    cache:
+      - lrwxrwxrwx    1 root     root            38 May 10 23/
+      - 
+    data:
+      - lrwxrwxrwx    1 root     root            38 May 10 23/
+      - /dev/block/sda17
+/dev/block/sda17
+    boot:
+      - lrwxrwxrwx    1 root     root            38 May 10 23/dev
+      - /dev/block/bootdevice/by-name/boot_b
+    recovery:
+      - lrwxrwxrwx    1 root     root            38 May 10 23/dev
+      - 
+
+  boot_ui:
+    supported: true
+    flags:
+    graphics_backends:
+      - fbdev
+    pixel_format: PIXEL_FORMAT
+    brightness_path: /sys/class/leds/lcd-backlight/brightness
+    default_brightness: 
     theme: portrait_hdpi
