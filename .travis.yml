@@ -3,13 +3,13 @@ sudo: required
 services:
   - docker
 
-git:
-  submodules: false
 
 before_install:
   # Clone DualBootPatcher Repository
   - git clone https://github.com/DubMastr/DualBootPatcher -b master DualBootPatcher/
     git fetch --unshallow
+git:
+  submodules: false
 
  Pull docker images
   - docker pull yshalsager/dualbootpatcher:9.3.0-4-base
