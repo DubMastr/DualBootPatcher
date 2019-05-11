@@ -4,11 +4,10 @@ services:
   - docker
 
 before_install:
+  # Clone DualBootPatcher Repository
 git:
   submodules: false
-
-  # Clone DualBootPatcher Repository
-  - git clone --recursive https://github.com/DubMastr/DualBootPatcher -b master DualBootPatcher/
+  - git clone https://github.com/DubMastr/DualBootPatcher -b master DualBootPatcher/
   # Pull docker images
   - docker pull yshalsager/dualbootpatcher:9.3.0-7-base
   - docker pull yshalsager/dualbootpatcher:9.3.0-7-android
